@@ -1,0 +1,67 @@
+Tarefa: 2024-2_ARQ1_G01
+Aluno: Guilherme Soares Silva
+Matrícula: 863485
+
+Atividades
+01.) Fazer as conversões entre as bases indicadas:
+01a.) manualmente
+a.) 0,00011(2) = X(10)
+b.) 0,01001(2) = X(10)
+c.) 0,10101(2) = X(10)
+d.) 1,11101(2) = X(10)
+e.) 11,11001(2) = X(10)
+
+01b.) mediante uso de um programa em Verilog
+/*
+Guia_0201.v
+999999 - Xxx Yyy Zzz
+*/
+module Guia_0201;
+// define data
+real
+x = 0 ; // decimal
+real power2 = 1.0; // power of 2
+integer
+y = 7 ; // counter
+reg [7:0] b = 8'b10100000; // binary (only fraction part, Big Endian)
+// actions
+initial
+begin : main
+$display ( "Guia_0201 - Tests" );
+$display ( "x = %f" , x );
+$display ( "b = 0.%8b", b );
+while ( y >= 0 )
+begin
+power2 = power2 / 2.0;
+if ( b[y] == 1 )
+begin
+x = x + power2;
+end
+$display ( "x = %f", x );
+y=y-1;
+end // end while
+end // main
+endmodule // Guia_0201
+
+Respostas:
+01.)
+    01.a)
+    a) 0,00011(2) = 0,09375(10)
+        0*2⁰ + 0*2⁻1 + 0*2⁻2 + 0*2⁻3 + 1*2⁻4 + 1*2⁻5 =
+        0 + 0 + 0 + 0 + 1/16 + 1/32 = 3/32 = 0,09375
+    
+    b.) 0,01001(2) = 0,28125(10)
+        0*2⁰ + 0*2⁻1 + 1*2⁻2 + 0*2⁻3 + 0*2⁻4 + 1*2⁻5 =
+        0 + 0 + 1/4 + 0 + 0 + 1/32 = 9/32 = 0,28125
+
+    c.) 0,10101(2) = 0,65625(10)
+        0*2⁰ + 1*2⁻1 + 0*2⁻2 + 1*2⁻3 + 0*2⁻4 + 1*2⁻5 =
+        0 + 1/2 + 0 + 1/8 + 0 + 1/32 = 21/32 = 0,65625
+
+    d.) 1,11101(2) = 1,90625(10)
+        1*2⁰ + 1*2⁻1 + 1*2⁻2 + 1*2⁻3 + 0*2⁻4 + 1*2⁻5 =
+        1 + 1/2 + 1/4 + 1/8 + 0 + 1/32 = 1 + 29/32 = 1,90625
+
+    e.) 11,11001(2) = 3,78125(10)
+        1*2¹ + 1*2⁰ + 1*2⁻1 + 1*2⁻2 + 0*2⁻3 + 0*2⁻4 + 1*2⁻5 =
+        2 + 1 + 1/2 + 1/4 + 0 + 0 + 1/32 = 2 + 1 + 25/32 = 3,78125

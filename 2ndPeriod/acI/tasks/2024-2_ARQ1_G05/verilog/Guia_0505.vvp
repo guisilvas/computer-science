@@ -1,0 +1,76 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x590f0c082730 .scope module, "Guia_0506_tb" "Guia_0506_tb" 2 28;
+ .timescale -9 -12;
+v0x590f0c097a20_0 .var "a", 0 0;
+v0x590f0c097ac0_0 .var "b", 0 0;
+v0x590f0c097b60_0 .net "y", 0 0, L_0x590f0c0983a0;  1 drivers
+S_0x590f0c0828c0 .scope module, "uut" "Guia_0506" 2 34, 2 9 0, S_0x590f0c082730;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "y";
+L_0x590f0c097c00 .functor AND 1, v0x590f0c097a20_0, v0x590f0c097a20_0, C4<1>, C4<1>;
+L_0x590f0c097c70 .functor NOT 1, L_0x590f0c097c00, C4<0>, C4<0>, C4<0>;
+L_0x590f0c097d30 .functor AND 1, v0x590f0c097ac0_0, v0x590f0c097ac0_0, C4<1>, C4<1>;
+L_0x590f0c097df0 .functor NOT 1, L_0x590f0c097d30, C4<0>, C4<0>, C4<0>;
+L_0x590f0c097ee0 .functor AND 1, v0x590f0c097a20_0, v0x590f0c097ac0_0, C4<1>, C4<1>;
+L_0x590f0c097fe0 .functor NOT 1, L_0x590f0c097ee0, C4<0>, C4<0>, C4<0>;
+L_0x590f0c0980c0 .functor AND 1, L_0x590f0c097c70, L_0x590f0c097df0, C4<1>, C4<1>;
+L_0x590f0c098180 .functor NOT 1, L_0x590f0c0980c0, C4<0>, C4<0>, C4<0>;
+L_0x590f0c098290 .functor AND 1, L_0x590f0c097fe0, L_0x590f0c098180, C4<1>, C4<1>;
+L_0x590f0c0983a0 .functor NOT 1, L_0x590f0c098290, C4<0>, C4<0>, C4<0>;
+v0x590f0c082d60_0 .net *"_ivl_0", 0 0, L_0x590f0c097c00;  1 drivers
+v0x590f0c0970b0_0 .net *"_ivl_12", 0 0, L_0x590f0c0980c0;  1 drivers
+v0x590f0c097190_0 .net *"_ivl_16", 0 0, L_0x590f0c098290;  1 drivers
+v0x590f0c097250_0 .net *"_ivl_4", 0 0, L_0x590f0c097d30;  1 drivers
+v0x590f0c097330_0 .net *"_ivl_8", 0 0, L_0x590f0c097ee0;  1 drivers
+v0x590f0c097460_0 .net "a", 0 0, v0x590f0c097a20_0;  1 drivers
+v0x590f0c097520_0 .net "b", 0 0, v0x590f0c097ac0_0;  1 drivers
+v0x590f0c0975e0_0 .net "na", 0 0, L_0x590f0c097c70;  1 drivers
+v0x590f0c0976a0_0 .net "nand_ab", 0 0, L_0x590f0c097fe0;  1 drivers
+v0x590f0c097760_0 .net "nand_na_nb", 0 0, L_0x590f0c098180;  1 drivers
+v0x590f0c097820_0 .net "nb", 0 0, L_0x590f0c097df0;  1 drivers
+v0x590f0c0978e0_0 .net "y", 0 0, L_0x590f0c0983a0;  alias, 1 drivers
+    .scope S_0x590f0c082730;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x590f0c097a20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x590f0c097ac0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x590f0c097a20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x590f0c097ac0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x590f0c097a20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x590f0c097ac0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x590f0c097a20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x590f0c097ac0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 53 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x590f0c082730;
+T_1 ;
+    %vpi_call 2 57 "$monitor", "Tempo = %0t: a = %b, b = %b, y = %b", $time, v0x590f0c097a20_0, v0x590f0c097ac0_0, v0x590f0c097b60_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Guia_0506.v";

@@ -1,0 +1,69 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x615e0900d1c0 .scope module, "test_guia_0501" "test_guia_0501" 2 23;
+ .timescale 0 0;
+v0x615e09035060_0 .var "a", 0 0;
+v0x615e09035100_0 .var "b", 0 0;
+v0x615e090351d0_0 .net "s", 0 0, L_0x615e09035740;  1 drivers
+S_0x615e09020820 .scope module, "UUT" "guia_0501" 2 27, 2 7 0, S_0x615e0900d1c0;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "s";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+L_0x615e090352d0 .functor NOR 1, v0x615e09035060_0, v0x615e09035060_0, C4<0>, C4<0>;
+L_0x615e090353c0 .functor NOR 1, v0x615e09035100_0, v0x615e09035100_0, C4<0>, C4<0>;
+L_0x615e09035480 .functor NOR 1, L_0x615e090352d0, L_0x615e090352d0, C4<0>, C4<0>;
+L_0x615e09035540 .functor NOR 1, L_0x615e090353c0, L_0x615e090353c0, C4<0>, C4<0>;
+L_0x615e09035630 .functor NOR 1, L_0x615e09035480, L_0x615e09035540, C4<0>, C4<0>;
+L_0x615e09035740 .functor BUFZ 1, L_0x615e09035630, C4<0>, C4<0>, C4<0>;
+v0x615e09020ff0_0 .net "a", 0 0, v0x615e09035060_0;  1 drivers
+v0x615e09034a70_0 .net "b", 0 0, v0x615e09035100_0;  1 drivers
+v0x615e09034b30_0 .net "nota", 0 0, L_0x615e090352d0;  1 drivers
+v0x615e09034bd0_0 .net "nota_and_b", 0 0, L_0x615e09035630;  1 drivers
+v0x615e09034c90_0 .net "notb", 0 0, L_0x615e090353c0;  1 drivers
+v0x615e09034da0_0 .net "s", 0 0, L_0x615e09035740;  alias, 1 drivers
+v0x615e09034e60_0 .net "temp1", 0 0, L_0x615e09035480;  1 drivers
+v0x615e09034f20_0 .net "temp2", 0 0, L_0x615e09035540;  1 drivers
+    .scope S_0x615e0900d1c0;
+T_0 ;
+    %vpi_call 2 30 "$display", "Guia_0501 - (~a & b) using NOR" {0 0 0};
+    %vpi_call 2 31 "$display", " a | b || s " {0 0 0};
+    %vpi_call 2 32 "$display", "------------" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x615e09035060_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x615e09035100_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 33 "$display", " %b | %b || %b ", v0x615e09035060_0, v0x615e09035100_0, v0x615e090351d0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x615e09035060_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x615e09035100_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 34 "$display", " %b | %b || %b ", v0x615e09035060_0, v0x615e09035100_0, v0x615e090351d0_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x615e09035060_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x615e09035100_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 35 "$display", " %b | %b || %b ", v0x615e09035060_0, v0x615e09035100_0, v0x615e090351d0_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x615e09035060_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x615e09035100_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 36 "$display", " %b | %b || %b ", v0x615e09035060_0, v0x615e09035100_0, v0x615e090351d0_0 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Guia_0501.v";

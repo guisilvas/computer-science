@@ -1,0 +1,38 @@
+Qual é o tema e o nome do projeto?
+R: Relatar situações críticas de béns e locais públicos. Relata Cidadão.
+
+Qual é o problema tratado pelo projeto?
+R: Situação de degradação ou mau funcionamento de bens/locais públicos. Como calçadas com buracos, postes com mau funcionamento, praças degradadas, etc.
+
+Para qual público o projeto se destina?
+R: Para a população em geral.
+
+Quais foram as principais motivações para o desenvolvimento do projeto?
+R: Solucionar problemas típicos da população em geral com o objetivo de tornar o ambiente urbano mais agradável, inclusivo e sustentável.
+
+Qual é o objetivo do projeto?
+R: Criar uma plataforma estilo rede social com posts no intuito da população registrar às autoridades situações de locais e/ou bens públicos que se encontrem em estado crítico e necessitam de melhorias.
+
+Que impacto o projeto trará para seu público e para a sociedade?
+R: A forma como os cidadãos se relacionam entre si e com o ambiente público poderá ter melhorias significativas com locais mais funcionais.
+
+Qual é o diferencial/inovação do projeto em relação ao que já existe?
+R: Um site/app de fácil acesso com uma temática já conhecida pela população em geral(redes sociais) e uma proposta inovadora de relatar problemas comuns do cotidiano dos brasileiros.
+
+Como o projeto se sustentará? Quais são os mecanismos de monetização?
+R: Com possíveis iniciativas públicas ou privadas de empresas que atuam na área de arquitetura e urbanismo da cidade. Verbas do governo ou de empresas privadas.
+
+Como é o fluxo de usuários (User Flow) no sistema a ser desenvolvido?
+R: Acesso inicial; Cadastro do usuário, login e acesso à página inicial.
+   Login: Informação de email e senha, acesso à página inicial.
+   Página inicial: Visualização de públicações recentes de outros usuários com possibilidade de acesso ao perfil, postagens mais visualizadas e busca por postagens.
+   Perfil: Possibilidade de alteração de nome de usuário, foto, email e senha.
+   Busca: Pesquisa por postagens por diversos filtros, como região e data.
+   Postagens mais visualisadas: Tópico com as postagens mais relevantes.
+
+Quais são as principais entidades, atributos, relacionamento e restrições do banco de dados do projeto?
+R: 
+
+Quais são os recursos de sistemas inteligentes e inteligência artificial a serem adotados no projeto?
+R: 
+

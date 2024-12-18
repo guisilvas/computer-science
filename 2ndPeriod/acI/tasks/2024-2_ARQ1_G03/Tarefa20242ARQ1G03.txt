@@ -1,0 +1,115 @@
+Tarefa: 2024-2_ARQ1_G01
+Aluno: Guilherme Soares Silva
+Matrícula: 863485
+
+Atividades
+01.) Determinar os complementos para os valores e as quantidades de bits indicadas:
+DICA: Ajustar primeiro o tamanho, antes de calcular o complemento (C1,n ou C2,n).
+Exemplos:
+C1,5 (1101(2))= X(2)
+1101(2)= 0 1101 = 1 0010(2)
+C2,5 (1101(2))= X(2)
+1101(2)= 0 1101 = 1 0010 + 1 = 1 0011(2)
+
+01a.) manualmente
+a.) C1,6 (1010(2)) = X(2)
+b.) C1,8 (1101(2)) = X(2)
+c.) C2,6 (101001(2)) = X(2)
+d.) C2,7 (101111(2)) = X(2)
+e.) C2,8 (110100(2)) = X(2)
+
+01b.) mediante uso de um programa em Verilog
+/*
+Guia_0301.v
+999999 - Xxx Yyy Zzz
+*/
+module Guia_0301;
+// define data
+reg [7:0] a = 8'b000_1010 ; // binary
+reg [6:0] b = 8'b000_101 ; // binary
+reg [5:0] c = 8'b001_01 ; // binary
+reg [7:0] d = 0
+; // binary
+reg [6:0] e = 0
+; // binary
+reg [5:0] f = 0
+; // binary
+// actions
+initial
+begin : main
+$display ( "Guia_0301 - Tests" );
+d = ~a+1;
+$display ( "a = %8b -> C1(a) = %8b -> C2(a) = %8b", a, ~a, d );
+e = ~b+1;
+$display ( "b = %7b -> C1(b) = %7b -> C2(b) = %7b", b, ~b, e );
+f = ~c+1;
+$display ( "c = %6b -> C1(c) = %6b -> C2(c) = %6b", c, ~c, f );
+end // main
+endmodule // Guia_0301
+
+Respostas:
+01.)
+    a) C1,6 (1010(2)) = X(2)
+    	         1010(2) = 00 1010 = 11 0101(2)
+    	         
+    b) C1,8 (1101(2)) = X(2)
+    	         1101(2) = 0000 1101 = 1111 0010(2)
+    	         
+    c) C2,6 (101001(2)) = X(2)
+    	         101001(2) = 101001 = 010110 = 010110 + 1 = 010111(2)
+    
+    d) C2,7 (101111(2)) = X(2)
+    	         101111(2) = 0 101111 = 1 010000 = 1 010000 + 1 = 1 010001(2)
+    	        
+    e) C2,8 (110100(2)) = X(2)
+    	         110100(2) = 00 110100 = 11 001011 = 11 001011 + 1 = 11 001100(2)
+    	         
+
+01b.)
+/*
+Guia_0301.v
+863485 - Guilherme Soares Silva
+*/
+
+module Guia_0301;
+
+reg [5:0] a = 6'b001010;  // binnary
+reg [7:0] b = 8'b00001101;  // binnary
+reg [5:0] c = 6'b101001;  // binnary
+  reg [6:0] d = 7'b0101111;  // binarry
+  reg [7:0] e = 8'b00110100;  // binarry
+
+reg [5:0] c1_a, c2_a;
+reg [7:0] c1_b, c2_b;
+reg [5:0] c1_c, c2_c;
+reg [6:0] c1_d, c2_d;
+reg [7:0] c1_e, c2_e;
+
+initial
+begin : main
+    $display("Guia_0301 - Complementos");
+
+    c1_a = ~a; 
+    c2_a = ~a + 1; 
+    $display("a = %6b -> C1(a) = %6b -> C2(a) = %6b", a, c1_a, c2_a);
+
+    c1_b = ~b; 
+    c2_b = ~b + 1; 
+    $display("b = %8b -> C1(b) = %8b -> C2(b) = %8b", b, c1_b, c2_b);
+
+    c1_c = ~c; 
+    c2_c = ~c + 1; 
+    $display("c = %6b -> C1(c) = %6b -> C2(c) = %6b", c, c1_c, c2_c);
+
+    c1_d = ~d; 
+    c2_d = ~d + 1; 
+    $display("d = %7b -> C1(d) = %7b -> C2(d) = %7b", d, c1_d, c2_d);
+
+    c1_e = ~e; 
+    c2_e = ~e + 1; 
+    $display("e = %8b -> C1(e) = %8b -> C2(e) = %8b", e, c1_e, c2_e);
+end // main
+
+endmodule // Guia_0301
+
+

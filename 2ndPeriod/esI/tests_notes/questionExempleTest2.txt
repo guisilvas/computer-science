@@ -1,0 +1,108 @@
+Vamos organizar as informações e melhorar a estrutura das histórias de usuários, requisitos funcionais e não funcionais, matriz de rastreabilidade e modelo de casos de uso para o aplicativo da academia.
+
+### Histórias de Usuários
+
+1. **Aluno**
+   - Como aluno, quero me cadastrar no aplicativo para acessar os diferentes locais da academia.
+   - Como aluno, quero ler um QR-Code para entrar na academia.
+   - Como aluno, quero ser notificado se tive contato com alguém diagnosticado com COVID-19 nos últimos 7 dias.
+
+2. **Gerente de Infraestrutura**
+   - Como gerente da academia, quero cadastrar os locais de interesse da academia para gerenciar a capacidade e a segurança.
+   - Como gerente, quero consultar a quantidade de alunos em cada local da academia para garantir o distanciamento social.
+   - Como gerente, quero ser alertado se houver mais de 10 alunos em um local de interesse.
+
+3. **Gerente de Saúde**
+   - Como gerente de saúde, quero informar o sistema sobre um aluno diagnosticado com COVID-19 para rastrear contatos.
+
+### Requisitos Funcionais
+
+1. **Cadastro e Login de Alunos**
+   - O sistema deve permitir o cadastro de alunos.
+   - O sistema deve permitir o login de alunos.
+
+2. **Cadastro de Locais**
+   - O sistema deve permitir o cadastro de locais de interesse da academia.
+
+3. **Monitoramento de Aglomerações**
+   - O sistema deve monitorar quantos alunos estão em cada local da academia.
+   - O sistema deve alertar a gerência sobre locais com mais de 10 alunos.
+   - O sistema deve permitir que a gerência consulte a quantidade de pessoas por local.
+
+4. **Notificações de Contato**
+   - O sistema deve notificar alunos que tiveram contato com um aluno diagnosticado com COVID-19.
+
+5. **Rastreamento de Contatos**
+   - O sistema deve registrar e armazenar os locais frequentados pelos alunos.
+
+### Requisitos Não Funcionais
+
+1. **Disponibilidade**
+   - O sistema deve funcionar 24/7.
+
+2. **Acesso a Dados e Recursos**
+   - O sistema deve solicitar acesso aos dados do aluno.
+   - O sistema deve solicitar acesso ao Bluetooth do dispositivo do aluno.
+   - O sistema deve solicitar acesso à câmera do aluno para escanear QR-Codes.
+
+3. **Usabilidade**
+   - O sistema deve ser de fácil acesso e intuitivo.
+   - O sistema deve possuir recursos de acessibilidade para usuários com necessidades especiais.
+
+### Matriz de Rastreabilidade
+
+| ID   | Requisito                                     | História de Usuário                             |
+|------|-----------------------------------------------|------------------------------------------------|
+| RF1  | Cadastro de Alunos                            | Aluno (História 1)                             |
+| RF2  | Login de Alunos                               | Aluno (História 1)                             |
+| RF3  | Cadastro de Locais                            | Gerente de Infraestrutura (História 1)        |
+| RF4  | Monitoramento de Alunos por Local             | Gerente de Infraestrutura (História 2)        |
+| RF5  | Alerta sobre Aglomerações                     | Gerente de Infraestrutura (História 3)        |
+| RF6  | Consulta de Quantidade de Pessoas por Local   | Gerente de Infraestrutura (História 2)        |
+| RF7  | Notificação de Contato com COVID-19          | Aluno (História 3)                             |
+| RF8  | Registro dos Locais Frequentados pelos Alunos | Gerente de Saúde (História 1)                 |
+
+### Modelo de Casos de Uso
+
+#### Atores
+- **Aluno**
+- **Gerente de Infraestrutura**
+- **Gerente de Saúde**
+
+#### Casos de Uso
+
+1. **Cadastro de Aluno**
+   - **Ator:** Aluno
+   - **Descrição:** O aluno realiza o cadastro no aplicativo fornecendo informações pessoais.
+
+2. **Login de Aluno**
+   - **Ator:** Aluno
+   - **Descrição:** O aluno faz login no aplicativo para acessar suas funcionalidades.
+
+3. **Escanear QR-Code**
+   - **Ator:** Aluno
+   - **Descrição:** O aluno escaneia um QR-Code na entrada da academia para registrar sua presença.
+
+4. **Cadastrar Locais de Interesse**
+   - **Ator:** Gerente de Infraestrutura
+   - **Descrição:** O gerente cadastra locais de interesse no sistema.
+
+5. **Monitorar Alunos em Locais**
+   - **Ator:** Gerente de Infraestrutura
+   - **Descrição:** O sistema monitora e registra quantos alunos estão em cada local.
+
+6. **Alertar Aglomerações**
+   - **Ator:** Gerente de Infraestrutura
+   - **Descrição:** O sistema alerta o gerente se houver mais de 10 alunos em um local.
+
+7. **Notificar Contato com COVID-19**
+   - **Ator:** Gerente de Saúde
+   - **Descrição:** O sistema notifica os alunos que tiveram contato com um aluno diagnosticado.
+
+8. **Consultar Quantidade de Pessoas por Local**
+   - **Ator:** Gerente de Infraestrutura
+   - **Descrição:** O gerente consulta a quantidade de pessoas em cada local da academia.
+
+### Considerações Finais
+
+Essas informações estruturadas são essenciais para o desenvolvimento eficiente do aplicativo, garantindo que atenda às necessidades da academia, mantenha a segurança dos alunos e proporcione uma experiência de uso intuitiva e acessível. Se precisar de mais detalhes ou de outra seção, é só avisar!

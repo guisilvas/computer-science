@@ -1,0 +1,26 @@
+Nome: Guilherme Soares Silva
+Matrícula: 863485
+
+01.) 
+minterms: 4, 8, 9, 12, 13, 14
+
+ab/cd 00 01 11 10
+  00   
+  01  1      
+  11  1  1      1
+  10  1  1
+  
+SoP(ac'+bc'd'+abd') -> 1 quadra e 2 duplas
+  
+  
+MAXTERMS: 0, 1, 2, 3, 5, 6, 7, 10, 11, 15
+
+AB/CD 00 01 11 10
+  00  0  0  0   0 
+  01     0  0   0    
+  11        0
+  10        0   0
+  
+PoS((A+B)(C'D')(A+D')(B+C')) -> 4 quadras
+
+02.) 

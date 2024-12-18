@@ -1,0 +1,139 @@
+Prova 01 - 2509/2024
+
+Regra de Negócio:	  Forma como o negócio deve funcionar, quem fará o que.
+
+História de usuário:     Como um analista de investimentos
+			 Quero gerar relatórios mensais sobre os aportes
+			 Para que eu possa analisar o desempenho dos investimentos.
+
+Requisito funcional:   	 Funcionalidades do software, o que o sistema deve fazer, features.
+			 Ex: O sistema deve permitir o cadastro de usuário.
+
+Requisito não funcional: Características do software, aspectos como desempenho, escalabilidade e acessibilidade.
+			 Ex: A interface do usuário deve ser intuitiva e de fácil utilização.
+
+StakeHolder 1°: 	 Pessoa mais importante para o acontecimento.
+
+StakeHolder 2°:		 Segunda pessoa mais importante.
+
+Exercícios:
+1) Exercício sobre História de Usuários e Requisitos:
+Dada a história de usuário abaixo:
+Eu como cliente de uma operadora de telefonia celular desejo
+receber uma mensagem de texto via SMS quando os meus créditos
+ficarem inferiores à um valor que eu defina na área de clientes do site
+dessa operadora para que eu tenha um melhor controle das minhas
+finanças.
+Liste as tarefas (tasks) do time de software:
+- Criar uma interface para verificação do saldo atual do cliente que verifica a cada ligação ou envio de mensagem e após 30 dias da renovação de créditos.
+- Criar uma interface no sistema da telefonia para o usuário setar o limite mínimo de créditos e ser notificado quanto este limite ser atingido.
+- Criar uma mensagem de aviso automatizada para os usuários pré-pago para ser enviada assim que necessário.
+
+Liste os requisitos funcionais:
+RF01: O sistema deve permitir que o usuário defina o mínimo de crétido para que ele seja notificado.
+RF02: O sistema deve disponibilizar um relatório sobre os gastos com créditos para seus usuários.
+RF03: O sistema deve possuir uma integração com o saldo financeiro do usuário na operadora para que ao atingir o limite estipulado pelo usuário envie uma mensagem de aviso.
+
+Liste os requisitos não funcionais:
+RNF01: O sistema deve armazenar o limite mínimo de crédito que cada usuário setar.
+RNF02: O sistema deve garantir que as mensagens enviadas aos usuários tenha um critério bem definido, garantindo o bloqueio de spam.
+RNF03: O sistema deve fornecer uma interace clara e objetiva para que o usuário não tenha dificuldades de uso.
+RNF04: O sistema deve enviar a mensagem de texto via SMS ao cliente com no máximo 1min de atraso após o saldo atingir o limite.
+RNF05: O sistema deve garantir que a linha do usuário esteja no ar 24/7, assim como a possibilidade de envio de mensagem.
+
+---/---
+
+2)Eu como usuário do software desejo fazer uma autenticação rápida e
+segura para conseguir utilizar o software sem perder tempo e sem
+preocupações de problemas futuros.
+
+Liste as tarefas (tasks):
+- Criar um interace de cadastro com a captação de email, senha e outros dados pessoais.
+- Criar uma seção na interface de cadastro para captação de outros dados capazes de realizar a autenticação, como telefone, biometria, reconhecimento facial, entre outros.
+- Criar uma seção de login com a possibilidade de escolha do método de autenticação, caso já esteja cadastrado pelo usuário.
+- Criar uma interface de usuário dentro do software para que o usuário possa alterar/remover um método de autenticação.
+
+Liste os requisitos funcionais:
+RF01: O sistema deve permitir o cadastro de métodos de autenticação.
+RF02: O sistema deve permitir a alteração e remoção de métodos de autenticação.
+RF03: O sistema deve enviar um código de segurança para a autenticação de login para métodos que não utilizam sensores, como email e SMS.
+RF04: Caso o usuário não possua acesso a determinado tipo de autenticação antes cadastrado, o sistema deve enviar um código de recuperação via email.
+
+Liste os requisitos não funcionais:
+RNF01: O sistema deve disponibilizar métodos de autenticação que forneçam acessibilidade.
+RNF02: O sistema deve garantir que o usuário seja reconhecido pelo método de autenticação caso envolva sensores.
+RNF03: O sistema deve enviar o código de autenticação com um máximo de 30s de atraso.
+RNF04: O sistema deve garantir que caso o método de autenticação falhe o usuário para realizar a autenticação por outro método ou pela senha padrão.
+RNF05: O sistema deve garantir que o método de autenticação esteja no ar 24/7.
+
+1. Considerando sistemas que você utiliza no seu dia a dia como Instagram, Uber,
+Spotify, iFood, entre outros, você deverá apresentar as principais histórias de usuários,
+listar os requisitos funcionais e requisitos não-funcionais, elaborar a matriz de
+rastreabilidade e construir o modelo e casos de uso do sistema.
+
+Historias de usuários:
+- Como usuário quero realizar cadastro no aplicativo para monitorar minha conta
+- Como usuário quero realizar login no aplicativo para fazer pedidos
+- Como usuário quero poder pesquisar por restaurante para que seja possível fazer um pedido
+- Como usuário quero poder rastrear meu pedido para monitorar onde ele está
+- Como dono de estabelecimento quero poder cadastrar pratos para realizar vendas
+- Como entregador que poder inserir minha localização para atender pedidos perto de min
+
+Requisitos funcionais:
+- O sistemas deve permitir o cadastro de novos usuários
+- O sistema deve permitir o cadastro de novos entregadores
+- O sistema deve permitir o cadastro de novos restaurantes
+- O sistema deve permitir que o usuário faça busca por estabelecimentos
+- O sistema deve disponibilizar um histórico de pedidos do usuário
+
+Requisitos não funcionais:
+- O sistema deve funcionar 24/7
+- O sistema deve ser de fácil acesso e intuitivo
+- O sistemas deve armazenar os dados pessoais dos usuários, estabelecimentos e entregadores criptografados
+- O sistema deve possuir recursos de acessibilidade
+
+
+3) Uma academia de ginástica deseja desenvolver um aplicativo para monitorar a
+proximidade entre os seus alunos com o fim do isolamento social imposto pela
+pandemia da COVID-19. Cada aluno deverá realizar seu próprio cadastro no aplicativo.
+A gerência de infraestrutura da academia fará o cadastro de todos os locais de interesse
+do seu espaço, tais como, área de esteiras e bicicletas, área de alongamento, espaço de
+musculação, salas de aulas especializadas, etc. Cada aluno deverá iniciar o seu
+aplicativo para ler um QR-Code e entrar na academia que passará a coletar dados dos
+locais do usuário, registrando ainda o identificador de todos os demais aplicativos que
+se aproximarem a menos de um metro de distância (dado capturado via Bluetooth). A
+gerência de infraestrutura deverá ser alertada sobre a aglomeração de mais de 10
+pessoas em um local de interesse e ainda poderá consultar a quantidade de pessoas por
+local de interesse. Caso a gerência de saúde corporativa informe que um aluno foi
+diagnosticado com COVID-19, o sistema deve ser capaz de listar todas as pessoas que
+tiveram contato que este doente nos últimos 7 dias. O sistema deve notificar via
+aplicativo essas pessoas que tiveram contato com esse doente e recomendar uma
+consulta médica. Dado este contexto, você deverá apresentar as principais histórias de
+usuários, listar os requisitos funcionais e requisitos não-funcionais, elaborar a matriz de
+rastreabilidade e construir o modelo e casos de uso do sistema:
+
+Historias de usuários:
+- Como aluno quero realizar cadastro no aplicativo para acessar o diferentes locais da academia
+- Como aluno quero poder ler o qrcode para entrar na academia
+- Como gerente da academia quero poder cadastrar locais de interesse da academia
+- Como usuário quero poder rastrear meu pedido para monitorar onde ele está
+- Como dono de estabelecimento quero poder cadastrar pratos para realizar vendas
+- Como entregador que poder inserir minha localização para atender pedidos perto de min
+
+Requisitos funcionais:
+- O sistemas deve permitir o cadastro de alunos
+- O sistema deve permitir o login de alunos
+- O sistema deve permitir o cadastro de locais da academia
+- O sistema deve monitorar quantos alunos estão em casa local da academia
+- O sistema deve alertar a gerência sobre locais com mais de 10 alunos
+- O sistema deve permitir que a gerência consulte a quantidade de pessoas por local
+- O sistema deve notificar alunos que tiveram contato com algum aluno diagnosticado com COVID-19
+
+Requisitos não funcionais:
+- O sistema deve funcionar 24/7
+- O sistema deve pedir acesso aos dados do aluno
+- O sistema deve pedir acesso ao bluetooth do disposistivo do aluno
+- O sistema deve ser de fácil acesso e intuitivo
+- O sistema deve requerir acesso à camera do aluno
+- O sistemas deve armazenar os locais frequentados pelos alunos
+- O sistema deve possuir recursos de acessibilidade

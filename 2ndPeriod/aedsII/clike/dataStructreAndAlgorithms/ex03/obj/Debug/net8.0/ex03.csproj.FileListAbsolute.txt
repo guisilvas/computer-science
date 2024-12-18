@@ -1,0 +1,15 @@
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/obj/Debug/net8.0/ex03.GeneratedMSBuildEditorConfig.editorconfig
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/obj/Debug/net8.0/ex03.AssemblyInfoInputs.cache
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/obj/Debug/net8.0/ex03.AssemblyInfo.cs
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/obj/Debug/net8.0/ex03.csproj.CoreCompileInputs.cache
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/obj/Debug/net8.0/ex03.sourcelink.json
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/bin/Debug/net8.0/ex03
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/bin/Debug/net8.0/ex03.deps.json
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/bin/Debug/net8.0/ex03.runtimeconfig.json
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/bin/Debug/net8.0/ex03.dll
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/bin/Debug/net8.0/ex03.pdb
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/obj/Debug/net8.0/ex03.dll
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/obj/Debug/net8.0/refint/ex03.dll
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/obj/Debug/net8.0/ex03.pdb
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/obj/Debug/net8.0/ex03.genruntimeconfig.cache
+/home/guisilvas/git/2ndPeriod/aedsII/dataStructreAndAlgorithms/ex03/obj/Debug/net8.0/ref/ex03.dll

@@ -1,0 +1,106 @@
+01.) Determinar e implementar os circuitos equivalentes em Verilog e no Logisim: 
+ 
+a.) expressão canônica para SoP(a,b,c,d) 
+b.) expressão canônica para PoS(A,B,C,D) 
+c.) simplificação de mintermos   pelo mapa de Veitch-Karnaugh 
+d.) simplificação de MAXTERMOS pelo mapa de Veitch-Karnaugh 
+e.) expressão SoP equivalente com portas NAND (usar dupla negação) 
+f.) expressão PoS equivalente com portas NOR   (usar dupla negação)
+
+V-K Map
+
+Minterms -> SoP(2, 4, 7, B, C)
+AB/CB  00  01  11  10
+  00                1 
+  01   1       1
+  11   1
+  10           1     
+
+Expression: BC'D' + A'B'CD' + A'BCD + AB'CD
+            
+Maxterms -> PoS(0, 1, 3, 5, 6, 8, 9, A, D, E, F)
+AB/CB  00  01  11  10
+  00   0   0   0 
+  01       0       0
+  11       0   0   0
+  10   0   0       0
+
+Expression: 
+
+02.) Implementar e testar a função lógica descrita em Verilog e no Logisim para obter  
+a tabela-verdade: 
+ 
+     module f ( output s, input x, input y ); 
+        wire w1, w2, w3, w4, w5; 
+        not  NOT_1 (w1, x); 
+        not  NOT_2 (w2, y); 
+        and OR__1 (w3, y, w1); 
+        or    OR__2 (w4, w2, x); 
+        not  NOT_3 (w5, w4); 
+        and AND_1 (s, w3, w5); 
+     endmodule // s = f (x,y)
+
+R: A resposta em Logisim e Verilog estão na pasta logisim e verilog, respectivamente.
+
+03.) Implementar no Verilog e no Logisim a expressão abaixo para obter  
+a tabela verdade: 
+DICA: Usar MUX(a,b,chave). Se chave=0, (a); senão, (b). 
+ 
+ MUX ( MUX(b,a,c), MUX(NOT(a),NOT(b),c), NOT(c) )
+
+ R: A resposta em Logisim e Verilog estão na pasta logisim e verilog, respectivamente.
+
+04.) Dado o valor negativo, já em complemento de 2, 2310(4) , com 01 byte de representação, 
+encontrar a soma binária desse valor com 56 (8) .Completar com zeros, se necessário.
+
+R: 2310(4) + 56(8) = 11001011(2)
+
+Operações 2310(4)                   =
+          2*4³ + 3*4² + 1*4¹ + 0*4⁰ = 
+          128  +  48  +  4   +  0   =
+                180(10)             =
+                128 + 52            =
+                128 + 32 + 20       =
+                128 + 32 + 16 + 4   =
+                2⁷ + 2⁵ + 2⁴ + 2²   =
+                10110100(2)
+
+          C2:   01001011
+               +       1
+               ---------
+                01001100(2)
+
+          56(8)                     =
+          5*8¹ + 6*8⁰               = 
+           40  +  6                 =
+              46(10)                =
+              32 + 14               =
+              32 + 8 + 6            =
+              32 + 8 + 4 + 2        =
+              2⁵ + 2³ + 2² + 2¹     =
+              00101110(2)           
+
+        Sum = 01001100(2) + 00101110(2) 
+
+               01001100
+             + 00101110
+               --------
+               01111010(2)
+
+
+05.) Implementar no Verilog e no Logisim a expressão abaixo para obter  
+a expressão por mintermos equivalente: 
+ 
+NAND (XOR (a, b), NOR (NOT(a),NOT (b)))
+
+R:
+                                    Truth table:
+    entries                                                             output
+    a     b  NOT(a)  NOT(b)  NOR(NOT(a),NOT(b))  XOR(a,b)  S = NAND(XOR(a,b),NOR(NOT(a),NOT(b))) 
+
+    0     0     1      1            0               0                     1
+    0     1     1      0            0               1                     1
+    1     0     0      1            0               1                     1
+    1     1     0      0            1               0                     1
+
+A resposta em Logisim e Verilog estão na pasta logisim e verilog, respectivamente.
